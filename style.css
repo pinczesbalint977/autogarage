@@ -129,6 +129,12 @@ body {
   border:0;
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
+
+.btn-ghost{
+
+  color:#b02a24;
+}
+
 .btn-primary {
   background: linear-gradient(180deg,var(--accent),var(--accent-dark));
   color: #111;
