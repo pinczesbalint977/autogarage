@@ -12,9 +12,17 @@ function createMobileNav() {
     <a href="#home">Kezdőlap</a>
     <a href="#services">Szolgáltatások</a>
     <a href="#about">Rólunk</a>
-    <a href="#gallery">Galéria</a>
     <a href="#contact">Elérhetőségek</a>
   `;
+
+  // ⬇️ MENÜPONT KATTINTÁS → ZÁRÁS
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('active');
+      burger.classList.remove('open');
+    });
+  });
+
   document.body.appendChild(mobileNav);
 }
 
@@ -33,11 +41,10 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // close mobile nav after click
-      if (mobileNav) mobileNav.classList.remove('active');
     }
   });
 });
+
 
 // Simple contact form placeholder handler
 const form = document.getElementById('contactForm');
