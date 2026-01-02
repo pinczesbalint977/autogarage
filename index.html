@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AutoCraft Garage Autószerviz</title>
+
+  <!-- Modern font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <!-- MODAL OVERLAY -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="AutoCraft Garage kezdőlap">
+        <span class="brand-badge">AC</span>
+        <span class="brand-text">AutoCraft Garage</span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Fő navigáció">
+        <ul class="nav-list" id="navList">
+          <li><a href="#home">Kezdőlap</a></li>
+          <li><a href="#services">Szolgáltatások</a></li>
+          <li><a href="#about">Rólunk</a></li>
+          <li><a href="#contact">Elérhetőségek</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <a class="btn btn-outline" href="#contact">Árajánlat</a>
+        <a class="btn btn-primary" href="#contact" id="bookingBtn">Foglalj időpontot</a>
+
+        <button id="burger" class="burger" aria-label="Menü">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  
+
+  <!-- ========== HERO ========== -->
+  <section id="home" class="hero" role="region" aria-label="Kezdőlap">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="kicker">PROFESSZIONÁLIS • GYORS • BIZTONSÁGOS</div>
+        <h1>Autójavítás megbízható kezekben</h1>
+        <p class="lead">Teljes körű javítás, futómű és fék, motor diagnosztika modern eszközökkel, garanciával.</p>
+
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Foglalj időpontot</a>
+          <a href="#services" class="btn btn-ghost">Szolgáltatások</a>
+        </div>
+
+        <ul class="traits">
+          <li>Garancia minden munkára</li>
+          <li>24h gyors diagnosztika</li>
+          <li>Csereautó opció</li>
+        </ul>
+      </div>
+
+      <div class="hero-image" aria-hidden="true">
+        <!-- Később cseréld a placeholdert saját képre -->
+        <img src="pic/garett-mizunaka-xFjti9rYILo-unsplash.jpg" alt="Autó a műhelyben">
+        <div class="badge-floating">25+ ÉV TAPASZAT</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services" class="section" aria-label="Szolgáltatások">
+    <div class="container">
+      <h2 class="section-title">Szolgáltatásaink</h2>
+      <p class="section-sub">Megbízható, gyors és profi megoldások minden típusú járműhöz.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-media"><img src="pic/motor.jpg" alt=""></div>
+          <div class="card-body">
+            <h3>Motor & Váltó</h3>
+            <p>Diagnosztika, hibaelhárítás, felújítás, precíz munkavégzés modern műszerekkel.</p>
+            <a class="card-btn" href="#" data-modal="motor">Részletek</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media"><img src="pic/fék.jpg" alt=""></div>
+          <div class="card-body">
+            <h3>Fék & Futómű</h3>
+            <p>Fékbetét és tárcsa csere, futómű állítás, geometria és teljes körű ellenőrzés.</p>
+            <a class="card-btn" href="#" data-modal="fek">Részletek</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media"><img src="pic/elektromos.jpg" alt=""></div>
+          <div class="card-body">
+            <h3>Klíma & Elektromos</h3>
+            <p>Klíma töltés, szivárgáskeresés, akkumulátor és elektromos hibák javítása.</p>
+            <a class="card-btn" href="#" data-modal="klima">Részletek</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="section alt" aria-label="Rólunk">
+    <div class="container about-grid">
+      <div class="about-image">
+        <img src="pic/műhely.jpg" alt="Műhely kép">
+      </div>
+      <div class="about-copy">
+        <h2>AutoCraft Garage</h2>
+        <p class="muted">Családi vállalkozás nagy tapasztalattal és profi csapattal. Az ügyfél számára tiszta, gyors és átlátható megoldásokat biztosítunk a hagyományos kézművesség találkozik a modern technológiával.</p>
+
+        <ul class="about-list">
+          <li><strong>12 400+</strong> elvégzett munka</li>
+          <li><strong>25+</strong> év szakmai tapasztalat</li>
+          <li><strong>4.9/5</strong> átlagos ügyfélértékelés</li>
+        </ul>
+
+        <a class="btn btn-primary" href="#contact">Lépj kapcsolatba</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section contact-section" aria-label="Kapcsolat">
+    <div class="container contact-grid">
+      <div class="contact-card">
+        <h3>Foglalás / Kapcsolat</h3>
+        <p class="muted">Hívj minket vagy írj üzenetet, visszahívunk a lehető legrövidebb időn belül.</p>
+
+        <div class="contact-meta">
+          <div><strong>Telefon:</strong> +36 30 000 0000</div>
+          <div><strong>Cím:</strong> Példa utca 5., Budapest</div>
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <input name="name" type="text" placeholder="Név" required>
+          <input name="phone" type="tel" placeholder="Telefonszám" required>
+          <input name="email" type="email" placeholder="Email">
+          <textarea name="message" placeholder="Üzenet" rows="4"></textarea>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Küldés</button>
+            <button type="button" class="btn btn-outline" id="callBtn">Hívást kérek</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="map-placeholder" aria-hidden="true">
+        <!-- Itt később Google Maps iframe jöhet -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15263.698056783705!2d19.671019284264013!3d47.4457521161624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1shu!2shu!4v1767364768631!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div>© <strong>AutoCraft Garage</strong> 2025</div>
+    </div>
+  </footer>
+
+
+
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-content">
+      <p>
+        Ez a weboldal cookie-kat használ a megfelelő működés, statisztikai mérés és a felhasználói élmény javítása érdekében.
+        <a href="cookie-szabalyzat.html" target="_blank">Cookie szabályzat</a>
+      </p>
+      <button id="acceptCookies" class="btn btn-primary">Elfogadom</button>
+    </div>
+  </div>
+
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
+</body>
+</html>
