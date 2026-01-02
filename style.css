@@ -355,25 +355,7 @@ body {
 .about-list { list-style:none; margin-top:14px; padding:0; display:flex; gap:18px; }
 .about-list li { background: rgba(255,255,255,0.02); padding:10px 14px; border-radius:10px; color:var(--white); font-weight:700; }
 
-/* ---------- GALLERY ---------- */
-.gallery-grid {
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap:12px;
-  margin-top:18px;
-}
-.gallery-item { position:relative; border-radius:10px; overflow:hidden; min-height:160px; }
-.gallery-item img { width:100%; height:100%; object-fit:cover; display:block; transition: transform 300ms; }
-.gallery-item:hover img { transform: scale(1.06); }
-.gallery-item figcaption { position:absolute; inset:0; display:flex; align-items:flex-end; justify-content:flex-start; padding:12px; }
-.mini-btn {
-  background: rgba(0,0,0,0.6);
-  color:var(--white);
-  padding:8px 10px;
-  border-radius:8px;
-  border:1px solid rgba(255,255,255,0.04);
-  cursor:pointer;
-}
+
 
 /* ---------- CONTACT ---------- */
 .contact-grid {
@@ -381,6 +363,12 @@ body {
   grid-template-columns: 1fr 520px;
   gap:20px;
   align-items:start;
+}
+
+.contact-card a{
+
+  color: #bdbdbd;
+  text-decoration: none;
 }
 .contact-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
