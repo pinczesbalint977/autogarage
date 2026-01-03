@@ -46,31 +46,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 
-// Simple contact form placeholder handler
-const form = document.getElementById('contactForm');
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    // lightweight validation example
-    const name = form.name.value.trim();
-    const phone = form.phone.value.trim();
-    if (!name || !phone) {
-      alert('Kérlek add meg a neved és telefonszámod.');
-      return;
-    }
-    alert('Köszönjük! Üzenetedet fogadtuk. (placeholder)');
-    form.reset();
-  });
-}
-
-// "Hívást kérek" gomb hookup (placeholder)
-const callBtn = document.getElementById('callBtn');
-if (callBtn) {
-  callBtn.addEventListener('click', () => {
-    alert('Kérjük add meg telefonszámod a visszahíváshoz (placeholder).');
-  });
-}
-
 
 
 

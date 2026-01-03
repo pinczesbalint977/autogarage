@@ -157,16 +157,26 @@
           <div><strong>Cím:</strong> Példa utca 5., Budapest</div>
         </div>
 
-        <form id="contactForm" class="contact-form" novalidate>
+        <form class="contact-form"
+              action="https://formsubmit.co/YOUR_EMAIL_HERE"
+              method="POST">
+              
+          <!-- FormSubmit beállítások -->
+          <input type="hidden" name="_subject" value="Új kapcsolatfelvétel – AutoCraft Garage">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="thank-you.html">
+              
           <input name="name" type="text" placeholder="Név" required>
           <input name="phone" type="tel" placeholder="Telefonszám" required>
           <input name="email" type="email" placeholder="Email">
           <textarea name="message" placeholder="Üzenet" rows="4"></textarea>
+              
           <div class="form-actions">
             <button type="submit" class="btn btn-primary">Küldés</button>
-            <button type="button" class="btn btn-outline" id="callBtn">Hívást kérek</button>
+            <a href="tel:+36300000000" class="btn btn-outline">Hívást kérek</a>
           </div>
         </form>
+
       </div>
 
       <div class="map-placeholder" aria-hidden="true">

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Köszönjük – AutoCraft Garage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-900:#0a0a0b;
+  --panel:#1b1b1d;
+  --accent:#d9362b;
+  --accent-dark:#b02a24;
+  --muted:#bdbdbd;
+  --white:#f6f6f6;
+  --radius:14px;
+}
+
+* { box-sizing:border-box; }
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Roboto',system-ui,sans-serif;
+  background:
+    radial-gradient(1000px 500px at 15% 10%, rgba(217,54,43,0.08), transparent 20%),
+    linear-gradient(180deg,var(--bg-900),#050505 120%);
+  color:var(--white);
+}
+
+.card{
+  max-width:420px;
+  width:90%;
+  background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(0,0,0,.2));
+  border-radius:var(--radius);
+  padding:36px 28px;
+  text-align:center;
+  box-shadow:0 30px 80px rgba(0,0,0,.8);
+  animation:fadeUp .8s ease both;
+}
+
+h1{
+  font-family:'Montserrat',sans-serif;
+  color:var(--accent);
+  margin:0 0 12px;
+}
+
+p{
+  color:var(--muted);
+  line-height:1.6;
+  margin-bottom:28px;
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:12px 18px;
+  border-radius:10px;
+  font-weight:700;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:.25s ease;
+}
+
+.btn-primary{
+  background:linear-gradient(180deg,var(--accent),var(--accent-dark));
+  color:#111;
+}
+
+.btn-primary:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 40px rgba(217,54,43,.35);
+}
+
+.btn-outline{
+  border:1px solid rgba(255,255,255,.08);
+  color:var(--muted);
+}
+
+.btn-outline:hover{
+  color:var(--white);
+  background:rgba(255,255,255,.04);
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(24px)}
+  to{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Köszönjük!</h1>
+  <p>
+    Az üzeneted sikeresen megérkezett.<br>
+    Hamarosan felvesszük veled a kapcsolatot.
+  </p>
+
+  <div class="actions">
+    <a href="index.html#contact" class="btn btn-primary">Vissza a főoldalra</a>
+  </div>
+</div>
+
+</body>
+</html>
