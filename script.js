@@ -102,3 +102,20 @@ acceptCookies.addEventListener("click", () => {
   localStorage.setItem("cookiesAccepted", "true");
   cookieBanner.classList.remove("show");
 });
+
+
+
+
+
+// PAGE LOADER
+window.addEventListener('load', () => {
+  const loader = document.getElementById('page-loader');
+  if (!loader) return;
+
+  loader.style.opacity = '0';
+  loader.style.transition = 'opacity 0.4s ease';
+
+  setTimeout(() => {
+    loader.style.display = 'none';
+  }, 450);
+});

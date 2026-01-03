@@ -640,3 +640,56 @@ body {
   }
 }
 
+
+
+/* ============================= */
+/* PAGE LOADER */
+/* ============================= */
+
+#page-loader{
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(1200px 600px at 10% 10%, rgba(217,54,43,0.12), transparent 15%),
+    linear-gradient(180deg, #0a0a0b, #050505 120%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+}
+
+.loader-inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+}
+
+.loader-logo{
+  width: 96px;
+  animation: logoPulse 1.4s ease-in-out infinite;
+}
+
+.loader-text{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  letter-spacing: 4px;
+  font-size: 18px;
+  color: var(--white);
+  animation: textPulse 1.4s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes logoPulse{
+  0%   { transform: scale(1); opacity: .85; }
+  50%  { transform: scale(1.12); opacity: 1; }
+  100% { transform: scale(1); opacity: .85; }
+}
+
+@keyframes textPulse{
+  0%   { opacity: .6; }
+  50%  { opacity: 1; }
+  100% { opacity: .6; }
+}
+
